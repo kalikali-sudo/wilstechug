@@ -108,7 +108,7 @@ padding:120px 20px;
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url("../wills update4/kimulilap.png");
+    background: url("kimulidev.png") center center / cover no-repeat;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
