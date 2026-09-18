@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wills Tech Graphics and Creative Designs</title>
+
+    <meta name="description" content="Explore graphics, flyers, templates, creative designs and downloadable resources from Wills Tech Graphics Hub in Uganda.">
+
+    <meta name="keywords" content="graphics design Uganda, flyers Uganda, graphic templates, creative designs Uganda, Wills Tech Graphics Hub">
+
+    <meta name="author" content="Wills Tech">
+
+    <link rel="icon" href="wilstech2.png">
+
+    <link rel="stylesheet" href="graphics.css">
+    <link rel="stylesheet" href="mobile.css">
+<link rel="canonical" href="https://willstechug.com/graphics.html">
+</head>
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0f0e0e;
+  }
+
+  header {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .search-bar input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  /* Gallery grid */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .gallery-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .desc {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .download-btns button {
+    display: inline-block;
+    margin: 5px 2px;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+  }
+
+  .jpeg-btn { background: #04a133; color: #fff; }
+  .jpeg-btn:hover { background: #04771b; }
+
+  .pdf-btn { background: #e90c91; color: #fff; }
+  .pdf-btn:hover { background: #fa09a2; }
+
+  /* Image popup overlay */
+  #imagePopupOverlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+  }
+
+  #imagePopupOverlay img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+
+  #imagePopupOverlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <h1>🎨 Graphics Hub</h1>
+  <p>Search, preview, and download graphics</p>
+
+  <nav id="navMenu">
+<a href="index.html" class="home-btn">HOME</a>
+<link rel="Home" href="index.html">
+  </nav>
+<link rel="stylesheet" href="Graphics.css">
+<link rel="stylesheet" href="mobile.css">
+
+</header>
+<a href="index.html" id="homeBtn" class="home-btn-fixed hidden">
+  🏠 Home
+</a>
+<style>
+
+/* ===== SAMPLE PAGE CONTENT (for testing scroll) ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  height: 2000px; /* simulate long page */
+  padding: 20px;
+}
+
+/* ===== FLOATING HOME BUTTON ===== */
+.home-btn-fixed {
+  position: fixed;
+  top: 20px;
+  right: 70px;
+  padding: 12px 18px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.home-btn-fixed:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ===== OPTIONAL: HIDE UNTIL USER SCROLLS ===== */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+</style>
+<script>
+
+/* ===== SHOW BUTTON AFTER SCROLL ===== */
+const homeBtn = document.getElementById("homeBtn");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 200) {
+    homeBtn.classList.remove("hidden");
+    homeBtn.classList.add("show");
+  } else {
+    homeBtn.classList.remove("show");
+    homeBtn.classList.add("hidden");
+  }
+});
+
+</script>
+
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search graphics by description...">
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<!-- Image Popup -->
+<div id="imagePopupOverlay">
+  <span class="close-btn">&times;</span>
+  <img src="" alt="Preview">
+</div>
+
+<script>
+  const gallery = document.getElementById('gallery');
+  const imagePopupOverlay = document.getElementById('imagePopupOverlay');
+  const popupImage = imagePopupOverlay.querySelector('img');
+  const closePopupBtn = imagePopupOverlay.querySelector('.close-btn');
+  const searchInput = document.getElementById('searchInput');
+
+  // Load saved likes
+  let likedImages = JSON.parse(localStorage.getItem("likedImages")) || [];
+
+  const images = [
+    { src: 'kimuli v2.jpg', description: 'Designers profile template' },
+    { src: 'bedingsv3.jpg', description: 'Modern business poster design' },
+    { src: 'beaty 12.jpg', description: 'High-end flyer design for beauty courses template' },
+    { src: 'green travel flyer.jpg', description: 'Modern travel flyer design template' },
+    { src: 'birthday.jpg', description: 'Modern birthday poster design template' },
+    { src: 'mockup.jpg', description: 'bottle branding mockup design' },
+    { src: 'car mock.jpg', description: 'car branding mockup template design' },
+    { src: 'cd  jacket.jpg', description: 'Mordern CD jacket design template' },
+    { src: 'Happy birth day.jpg', description: 'happy birthday flyer design template' },
+    { src: 'jil.jpg', description: 'beddings flyer design' },
+    { src: 'travel.jpg', description: 'trifold travel brochure design template' },
+    { src: 'nanfuka.jpg', description: 'candidate poster design template' },
+    { src: 'cards.jpg', description: 'restaurant business card design template' },
+    { src: 'certificate.jpg', description: 'certificate of achievement design template' },
+    { src: 'flyerv2.jpg', description: 'kindergarten flyer design template' },
+    { src: 'BEAUTY DESIGN.jpg', description: 'beauty design flyer design' },
+    { src: 'background.jpeg', description: 'bright background design' },
+    { src: 'Pamela.jpg', description: 'business flyer design' },
+    { src: 'Flyer.jpg', description: 'business flyer template' },
+    { src: 'Flyer template.jpg', description: 'business flyer design' },
+    { src: 'Flyer1.jpg', description: 'business flyer design' },
+  ];
+
+  function displayGallery(filter = '') {
+    gallery.innerHTML = '';
+    const filtered = images.filter(item =>
+      item.description.toLowerCase().includes(filter.toLowerCase())
+    );
+
+    filtered.forEach(item => {
+      const container = document.createElement('div');
+      container.classList.add('gallery-item');
+      container.style.position = "relative";
+
+      const img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.description;
+      img.addEventListener('click', () => {
+        popupImage.src = item.src;
+        imagePopupOverlay.style.display = 'flex';
+      });
+
+      // ❤️ LIKE BUTTON
+      const likeBtn = document.createElement('span');
+      likeBtn.innerHTML = '❤';
+      likeBtn.classList.add('like-btn');
+
+      if (likedImages.includes(item.src)) {
+        likeBtn.classList.add('liked');
+      }
+
+      likeBtn.addEventListener('click', () => {
+        likeBtn.classList.toggle('liked');
+
+        if (likedImages.includes(item.src)) {
+          likedImages = likedImages.filter(i => i !== item.src);
+        } else {
+          likedImages.push(item.src);
+        }
+
+        localStorage.setItem("likedImages", JSON.stringify(likedImages));
+      });
+
+      const desc = document.createElement('div');
+      desc.className = 'desc';
+      desc.textContent = item.description;
+
+      const downloadDiv = document.createElement('div');
+      downloadDiv.className = 'download-btns';
+
+      const jpegBtn = document.createElement('button');
+      jpegBtn.className = 'jpeg-btn';
+      jpegBtn.textContent = 'Download JPEG';
+      jpegBtn.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = item.src;
+        link.download = item.src.split('/').pop();
+        link.click();
+      });
+
+      const pdfBtn = document.createElement('button');
+      pdfBtn.className = 'pdf-btn';
+      pdfBtn.textContent = 'Editable PDF';
+      pdfBtn.addEventListener('click', () => {
+        const whatsappNumber = 'YOUR_NUMBER_HERE';
+        const message = encodeURIComponent(`Hi, I want to purchase the editable PDF for: ${item.description}`);
+      window.open(`https://wa.me/${256744305607}?text=${message}`, '_blank');
+      });
+
+      downloadDiv.appendChild(jpegBtn);
+      downloadDiv.appendChild(pdfBtn);
+
+      container.appendChild(img);
+      container.appendChild(likeBtn);
+      container.appendChild(desc);
+      container.appendChild(downloadDiv);
+
+      gallery.appendChild(container);
+    });
+  }
+
+  displayGallery();
+
+  closePopupBtn.addEventListener('click', () => {
+    imagePopupOverlay.style.display = 'none';
+  });
+
+  searchInput.addEventListener('input', () => {
+    displayGallery(searchInput.value);
+  });
+
+</script>
+
+<style>
+  .like-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+}
+
+.like-btn.liked {
+  color: red;
+  background: rgba(255,255,255,0.9);
+}
+</style>
+
+
+<a href="https://wa.me/256744305607" target="_blank" class="whatsapp-float">
+  <img src="whats.png" width="28">
+</a>
+<style>
+  .whatsapp-float {
+  position: fixed;
+  bottom: 500px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 22px;
+  padding: 14px 16px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: scale(1.1);
+}
+</style>
+
+
+<!-- Page Loader -->
+<div id="page-loader">
+    <div class="loader-circle">
+        <img src="wilstech.png" alt="Wills Tech">
+    </div>
+</div>
+
+<script>
+window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+
+    setTimeout(function () {
+        loader.classList.add("hide-loader");
+    }, 300);
+});
+</script>
+
+
+</body>
+</html>
