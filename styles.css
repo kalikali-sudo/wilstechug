@@ -2184,15 +2184,13 @@ footer {
 .graphics-btn {
     display: inline-block;
     background: linear-gradient(45deg, #ff4d4d, #ff9900);
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 15px;
+    color: white;
+    padding: 9px 17px;
+    border-radius: 22px;
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
 
