@@ -1588,7 +1588,7 @@ footer {
    GRAPHICS HUB BUTTON
 ================================ */
 
-.graphics-btn {
+.Graphics-btn {
     position: fixed;
 
     /* Desktop position */
@@ -1622,7 +1622,7 @@ footer {
 }
 
 /* Desktop hover */
-.graphics-btn:hover {
+.Graphics-btn:hover {
     transform: scale(1.08);
     box-shadow: 0 0 20px rgba(255, 100, 0, 0.8);
 }
